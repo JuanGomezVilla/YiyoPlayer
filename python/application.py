@@ -1,5 +1,9 @@
 import tkinter as tk
 import vlc
+import requests
+
+archivo = requests.get("https://raw.githubusercontent.com/JuanGomezVilla/YiyoPlayer/main/python/prueba.json")
+enlaces = archivo.json()
 
 class YiyoPlayer:
     def __init__(self, window):
@@ -15,7 +19,6 @@ class YiyoPlayer:
         return self.window.winfo_id()
         
     def play(self, url):
-
         try:
             media = self.instance.media_new(url)
             self.player.set_media(media)
@@ -44,14 +47,14 @@ reproductor = YiyoPlayer(ventana)
 
 
 def leftKey(event):
-    reproductor.play('')
+    reproductor.play(enlaces[1])
 
 ventana.bind('<Left>', leftKey)
 
 #ventana.iconbitmap("icon.ico")
 
 
-reproductor.play('')
+reproductor.play(enlaces[0])
 
 
 

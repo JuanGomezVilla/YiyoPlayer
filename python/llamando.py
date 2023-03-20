@@ -7,6 +7,8 @@ print(myfile)'''
 
 
 import requests
-link = "https://dummyjson.com/products/categories"
-f = requests.get(link)
-print(f.json())
+archivo = requests.get("https://raw.githubusercontent.com/JuanGomezVilla/YiyoPlayer/main/python/prueba.json")
+enlaces = archivo.json()
+
+for enlace in enlaces:
+    print(enlace)
