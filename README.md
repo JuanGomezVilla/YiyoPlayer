@@ -1,30 +1,39 @@
-# YiyoPlayer
-Un reproductor de listas de reproducción (HLS) en Python y en un futuro, en C#
+<h1 style="display:flex;align-items:center;"><img width="40" src="assets/logo.ico" style="margin-right:10px">YiyoPlayer</h1>
 
 
-pip install python-vlc
-pip install pyinstaller
+![YiyoPlayer](https://img.shields.io/badge/version-v1.0.0-blue.svg)
 
-pyinstaller --hidden-import=python-vlc --noconsole --onefile -i="icon.ico" --name "YiyoPlayer" application.py
-pyinstaller --hidden-import=python-vlc --noconsole -i="icon.ico" --name "YiyoPlayer" application.py
+Un reproductor de listas de reproducción (HLS) en C#
 
+## 1. Configuración de un proyecto similar
+1. Crea un proyecto desde el CLI de VSCode:
+    ```bash
+    dotnet new wpf --name YiyoPlayer 
+    ```
+2. Acceder a la carpeta del proyecto:
+    ```bash
+    cd YiyoPlayer
+    ```
+3. Compilar el proyecto:
+    ```bash
+    dotnet build
+    ```
+4. Añadir [LibVLCSharp](https://www.nuget.org/packages/LibVLCSharp), [LibVLCSharp.WPF](https://www.nuget.org/packages/LibVLCSharp.WPF) y el complemento de trabajo [VideoLAN.LibVLC.Windows](https://www.nuget.org/packages/VideoLAN.LibVLC.Windows) para Windows:
+    ```bash
+    dotnet add package LibVLCSharp
+    dotnet add package LibVLCSharp.WPF
+    dotnet add package VideoLAN.LibVLC.Windows
+    ```
+5. Tras haber compilado, ejecutar el proyecto para comprobar que funciona correctamente:
+    ```bash
+    dotnet run
+    ```
 
-https://www.icoconverter.com/
+## 2. Anotaciones
 
+- Se utilizó https://www.icoconverter.com/ para convertir imágenes a iconos.
 
-
-
-
-
-dotnet add package Vlc.DotNet.Core.Interops --version 3.1.0
-
-
-
-dotnet add package Vlc.DotNet.Wpf --version 3.1.0
-dotnet add package VideoLAN.LibVLC.Windows --version 3.0.18
-
-
-<vlc:VlcControl x:Name="vlcPlayer" />
-
-using Vlc.DotNet.Core;
-using Vlc.DotNet.Wpf;
+- Para crear un ejecutable en Python, utiliza el siguiente comando:
+    ```bash
+    pyinstaller --hidden-import=python-vlc --noconsole --onefile -i="icon.ico" --name "YiyoPlayer" application.py
+    ```

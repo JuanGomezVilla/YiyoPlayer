@@ -4,9 +4,13 @@
         <TargetFramework>net6.0-windows</TargetFramework>
         <Nullable>enable</Nullable>
         <UseWPF>true</UseWPF>
+        <ApplicationManifest>app.manifest</ApplicationManifest>
     </PropertyGroup>
     <ItemGroup>
+        <PackageReference Include="LibVLCSharp" Version="3.6.8" />
+        <PackageReference Include="LibVLCSharp.WPF" Version="3.6.8" />
         <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.18" />
-        <PackageReference Include="Vlc.DotNet.Wpf" Version="3.1.0" />
+        <Folder Include="assets/" />
+        <Resource Include="assets/icon.ico" />
     </ItemGroup>
 </Project>
