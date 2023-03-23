@@ -1,5 +1,4 @@
-<h1 style="display:flex;align-items:center;"><img width="40" src="assets/logo.ico" style="margin-right:10px">YiyoPlayer</h1>
-
+# YiyoPlayer
 
 ![YiyoPlayer](https://img.shields.io/badge/version-v1.0.0-blue.svg)
 
