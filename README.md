@@ -2,7 +2,7 @@
 
 ![YiyoPlayer](https://img.shields.io/badge/version-v1.0.0-blue.svg)
 
-Un reproductor de listas de reproducción (HLS) en C#
+A player of channels in the cloud, such as m3u8 (HLS) in C# using LibVLCSharp, and also programmed in Python as a prototype.
 
 ## 1. Configuración de un proyecto similar
 1. Crea un proyecto desde el CLI de VSCode:
