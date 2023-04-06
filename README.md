@@ -28,6 +28,8 @@ A player of channels in the cloud, such as m3u8 (HLS) in C# using LibVLCSharp, a
     dotnet run
     ```
 
+dotnet publish -r win-x86 --self-contained true -c release
+
 ## 2. Anotaciones
 
 - Se utilizó https://www.icoconverter.com/ para convertir imágenes a iconos.

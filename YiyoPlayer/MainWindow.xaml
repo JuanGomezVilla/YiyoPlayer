@@ -19,38 +19,21 @@
     <DockPanel>
         <Menu x:Name="navigationTools" DockPanel.Dock="Top">
             <MenuItem Header="_Medio">
-                <MenuItem Header="_Recargar canales..." />
-                <MenuItem Header="_Canales desde archivo" />
-                <MenuItem Header="_Save" />
+                <MenuItem Header="_Recargar canales..." IsEnabled="False" />
+                <MenuItem Header="_Canales desde archivo" IsEnabled="False" />
                 <Separator />
-                <MenuItem Header="_Cerrar" />
+                <MenuItem Header="_Cerrar" Click="menuItemCerrar_Click" />
             </MenuItem>
             <MenuItem Header="_Reproducción">
-                <MenuItem Header="_Pausar" />
-                <MenuItem Header="_Siguiente canal" />
-                <MenuItem Header="_Anterior canal" />
+                <MenuItem Header="_Pausar" Click="menuItemPausar_Click" />
+                <MenuItem Header="_Siguiente canal" Click="menuItemSiguienteCanal_Click" />
+                <MenuItem Header="_Anterior canal" Click="menuItemAnteriorCanal_Click" />
             </MenuItem>
-            <MenuItem Header="_Audio">
-                <MenuItem Header="_Pausar" />
-                <MenuItem Header="_Siguiente canal" />
-                <MenuItem Header="_Anterior canal" />
-            </MenuItem>
-            <MenuItem Header="_Vídeo">
-                <MenuItem Header="_Pausar" />
-                <MenuItem Header="_Siguiente canal" />
-                <MenuItem Header="_Anterior canal" />
-            </MenuItem>
-            <MenuItem Header="_Ver">
-                <MenuItem Header="_Pausar" />
-                <MenuItem Header="_Siguiente canal" />
-                <MenuItem Header="_Anterior canal" />
-            </MenuItem>
-            <MenuItem Header="_Ayuda">
-                <MenuItem Header="_Ver ayuda" />
-                <MenuItem Header="_Buscar actualizaciones" />
-                <Separator />
-                <MenuItem Header="_Acerca de" />
-            </MenuItem>
+            
+                <!--
+                <MenuItem Name="item1" Header="Item #1" IsCheckable="True" />
+                <MenuItem Name="item2" Header="Item #2" IsEnabled="{Binding ElementName=item1,Path=IsChecked}" />
+                -->
         </Menu>
         
         <vlc:VideoView
