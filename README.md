@@ -4,39 +4,36 @@
 
 A channel player, has the ability to grab a JSON list and load it into the program
 
-## 1. Configuración de un proyecto similar
-1. Crea un proyecto desde el CLI de VSCode:
+## 1. Setup of a similar project
+1. Create a project from the VSCode CLI:
     ```bash
     dotnet new wpf --name YiyoPlayer 
     ```
-2. Acceder a la carpeta del proyecto:
+2. Access the project folder:
     ```bash
     cd YiyoPlayer
     ```
-3. Compilar el proyecto:
+3. Compile the project:
     ```bash
     dotnet build
     ```
-4. Añadir [LibVLCSharp](https://www.nuget.org/packages/LibVLCSharp), [LibVLCSharp.WPF](https://www.nuget.org/packages/LibVLCSharp.WPF) y el complemento de trabajo [VideoLAN.LibVLC.Windows](https://www.nuget.org/packages/VideoLAN.LibVLC.Windows) para Windows:
+4. Add [LibVLCSharp](https://www.nuget.org/packages/LibVLCSharp), [LibVLCSharp.WPF](https://www.nuget.org/packages/LibVLCSharp.WPF) and the work complement [VideoLAN.LibVLC.Windows](https://www.nuget.org/packages/VideoLAN.LibVLC.Windows) for Windows:
     ```bash
     dotnet add package LibVLCSharp
     dotnet add package LibVLCSharp.WPF
     dotnet add package VideoLAN.LibVLC.Windows
     ```
-5. Tras haber compilado, ejecutar el proyecto para comprobar que funciona correctamente:
+5. After you have compiled, run the project to verify that it works correctly:
     ```bash
     dotnet run
     ```
-
-<TrimMode>CopyUsed</TrimMode>
-dotnet publish -c Release -r win-x86 --self-contained true
-
-## 2. Anotaciones
-
-- Se utilizó https://www.icoconverter.com/ para convertir imágenes a iconos.
-- Anotaciones de métodos asíncronos con [LibVLC](https://code.videolan.org/videolan/LibVLCSharp/-/blob/master/docs/async_support.md)
-- [Best practices](https://code.videolan.org/videolan/LibVLCSharp/blob/master/docs/best_practices.md) with LibVLC  
-- Para crear un ejecutable en Python, utiliza el siguiente comando:
+6. Command on publish:
     ```bash
-    pyinstaller --hidden-import=python-vlc --noconsole --onefile -i="icon.ico" --name "YiyoPlayer" application.py
+    dotnet publish -c Release -r win-x86 --self-contained true
     ```
+
+## 2. Annotations
+
+- ICOconvert ([web](https://www.icoconverter.com/)) was used to convert images to icons (_.ico_).
+- Annotating async methods with [LibVLC](https://code.videolan.org/videolan/LibVLCSharp/-/blob/master/docs/async_support.md)
+- [Best practices](https://code.videolan.org/videolan/LibVLCSharp/blob/master/docs/best_practices.md) with LibVLC

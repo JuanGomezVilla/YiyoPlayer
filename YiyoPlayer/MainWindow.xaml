@@ -6,7 +6,7 @@
         xmlns:vlc="clr-namespace:LibVLCSharp.WPF;assembly=LibVLCSharp.WPF"
         xmlns:local="clr-namespace:YiyoPlayer"
         mc:Ignorable="d"
-        Title="YiyoPlayer - 1.0.0.0"
+        Title="YiyoPlayer - 1.0.0"
         WindowStartupLocation="CenterScreen"
         Icon="/assets/icon.ico"
         Background="Black"
@@ -33,7 +33,7 @@
             </MenuItem>
         </Menu>
         
-        <!-- Reproductor -->
+        <!-- Player -->
         <vlc:VideoView
             x:Name="YiyoPlayer"
             Background="Black"/>
