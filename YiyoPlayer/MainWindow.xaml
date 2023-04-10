@@ -19,23 +19,21 @@
     <DockPanel>
         <Menu x:Name="navigationTools" DockPanel.Dock="Top">
             <MenuItem Header="_Medio">
-                <MenuItem Header="_Recargar canales..." IsEnabled="False" />
-                <MenuItem Header="_Canales desde archivo" IsEnabled="False" />
+                <MenuItem Name="itemEnableChangeServer" Header="_Habilitar cambio de servidor..." IsCheckable="True" />
+                <MenuItem Header="_Cambiar servidor..." Click="menuItemChangeServer_Click" IsEnabled="{Binding ElementName=itemEnableChangeServer,Path=IsChecked}"/>
                 <Separator />
-                <MenuItem Header="_Cerrar" Click="menuItemCerrar_Click" />
+                <MenuItem Header="_Recargar canales..." Click="menuItemReloadChannels_Click" />
+                <Separator />
+                <MenuItem Header="_Cerrar" Click="menuItemClose_Click" />
             </MenuItem>
             <MenuItem Header="_Reproducción">
-                <MenuItem Header="_Pausar" Click="menuItemPausar_Click" />
-                <MenuItem Header="_Siguiente canal" Click="menuItemSiguienteCanal_Click" />
-                <MenuItem Header="_Anterior canal" Click="menuItemAnteriorCanal_Click" />
+                <MenuItem Header="_Pausar" Click="menuItemPause_Click" />
+                <MenuItem Header="_Siguiente canal" Click="menuItemNextChannel_Click" />
+                <MenuItem Header="_Anterior canal" Click="menuItemPreviousChannel_Click" />
             </MenuItem>
-            
-                <!--
-                <MenuItem Name="item1" Header="Item #1" IsCheckable="True" />
-                <MenuItem Name="item2" Header="Item #2" IsEnabled="{Binding ElementName=item1,Path=IsChecked}" />
-                -->
         </Menu>
         
+        <!-- Reproductor -->
         <vlc:VideoView
             x:Name="YiyoPlayer"
             Background="Black"/>

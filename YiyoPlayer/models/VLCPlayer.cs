@@ -17,7 +17,7 @@ namespace YiyoPlayer {
         public VLCPlayer(VideoView yiyoPlayer){
             // Initializes the LibVLC library and sets up the MediaPlayer and VideoView controls
             Core.Initialize();
-            this.libVLC = new LibVLC("--verbose=3");
+            this.libVLC = new LibVLC("--verbose=4"); //, "--reset-plugins-cache"
             this.mediaPlayer = new LibVLCSharp.Shared.MediaPlayer(this.libVLC);
             this.yiyoPlayer = yiyoPlayer;
             this.yiyoPlayer.MediaPlayer = this.mediaPlayer;

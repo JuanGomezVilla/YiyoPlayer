@@ -8,6 +8,6 @@ namespace YiyoPlayer {
         /// <summary>
         /// The server property is a nullable string that represents the server URL for the application. It can be set or retrieved by other code
         /// </summary>
-        public string? server { get; set; }
+        public string? server { get; set; } = "";
     }
 }

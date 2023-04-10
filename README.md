@@ -2,7 +2,7 @@
 
 ![YiyoPlayer](https://img.shields.io/badge/version-v1.0.0-blue.svg)
 
-A player of channels in the cloud, such as m3u8 (HLS) in C# using LibVLCSharp, and also programmed in Python as a prototype.
+A player of channels in the cloud, such as m3u8 (HLS) in C# using LibVLCSharp
 
 ## 1. Configuración de un proyecto similar
 1. Crea un proyecto desde el CLI de VSCode:
@@ -28,12 +28,14 @@ A player of channels in the cloud, such as m3u8 (HLS) in C# using LibVLCSharp, a
     dotnet run
     ```
 
-dotnet publish -r win-x86 --self-contained true -c release
+<TrimMode>CopyUsed</TrimMode>
+dotnet publish -c Release -r win-x86 --self-contained true
 
 ## 2. Anotaciones
 
 - Se utilizó https://www.icoconverter.com/ para convertir imágenes a iconos.
-
+- Anotaciones de métodos asíncronos con [LibVLC](https://code.videolan.org/videolan/LibVLCSharp/-/blob/master/docs/async_support.md)
+- [Best practices](https://code.videolan.org/videolan/LibVLCSharp/blob/master/docs/best_practices.md) with LibVLC  
 - Para crear un ejecutable en Python, utiliza el siguiente comando:
     ```bash
     pyinstaller --hidden-import=python-vlc --noconsole --onefile -i="icon.ico" --name "YiyoPlayer" application.py
