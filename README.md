@@ -2,7 +2,7 @@
 
 ![YiyoPlayer](https://img.shields.io/badge/version-v1.0.0-blue.svg)
 
-A player of channels in the cloud, such as m3u8 (HLS) in C# using LibVLCSharp
+A channel player, has the ability to grab a JSON list and load it into the program
 
 ## 1. Configuración de un proyecto similar
 1. Crea un proyecto desde el CLI de VSCode:
